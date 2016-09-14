@@ -1,0 +1,16 @@
+{
+  "name": "plus-card",
+  "version": "0.1.0",
+  "main": "dist/app.js",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p .",
+    "start": "http-server -c-1 -d false"
+  },
+  "dependencies": {
+    "tabris": "^1.9.0"
+  },
+  "devDependencies": {
+    "typescript": "^1.8.10"
+  }
+}
