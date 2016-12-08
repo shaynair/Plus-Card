@@ -12,7 +12,8 @@ export default class MainPage extends Page {
     super({
       topLevel: true,
       title: 'MESA Plus Card',
-      background: 'rgb(9, 120, 191)'
+      icon: {src: './images/logo.png'},
+      background: 'rgb(255, 255, 255)'
     });
 
     this.state = 0;
@@ -32,7 +33,7 @@ export default class MainPage extends Page {
     this.animateIn(new TextView({
       id: 'code',
       text: code,
-      textColor: 'white',
+      textColor: 'black',
       font: 'bold 24px',
       opacity: 0,
       centerX: 0, top: ['prev()', 0],
@@ -100,7 +101,7 @@ export default class MainPage extends Page {
       centerX: 0, top: ['prev()', 0],
       opacity: 0,
       width: 300,
-      textColor: 'white',
+      textColor: 'black',
       font: '24px'
     });
 
@@ -171,7 +172,7 @@ export default class MainPage extends Page {
 
   	new ActivityIndicator({id: 'activity', centerX: 0, centerY: 0}).appendTo(this);
 
-	fetch("http://192.168.0.119:8080/package.json")
+	fetch("http://172.20.10.2:8080/package.json")
 	.then(response => response.json())
   .then(json => {
     console.log("success " + json);
