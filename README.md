@@ -2,12 +2,6 @@
 
 A Tabris.js project for the Management and Economics Students' Association (MESA).
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [How to start](#how-to-start)
-- [Contributing](#contributing)
-
 ## How to start
 
 * This project requires _Node 6_ and _NPM 3.10 or greater_.
