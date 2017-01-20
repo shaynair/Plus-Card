@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="plus-card" version="0.1.0">
+<widget id="pluscard" version="0.1.0">
   <name>Plus Card</name>
   <description>
     MESA Plus Card
   </description>
-  <author email="akshay.nair@mail.utoronto.ca">
-    akshay-nair
+  <author email="info@mesa.ca">
+    MESA
   </author>
 </widget>
