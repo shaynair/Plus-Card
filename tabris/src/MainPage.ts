@@ -1,4 +1,4 @@
-import { Page, Button, TextView, ImageView, TextInput, ActivityIndicator, Widget } from 'tabris';
+import { Page, Button, TextView, ImageView, TextInput, ActivityIndicator, Widget, ScrollView } from 'tabris';
 
 const KEY = "MESAPLUS";
 const MAX = 30;
@@ -7,12 +7,12 @@ export default class MainPage extends Page {
 
   state: number
   input: TextInput
+  view: ScrollView
 
   constructor() {
     super({
       topLevel: true,
       title: 'MESA Plus',
-      icon: {src: './images/logo.png'},
       background: 'rgb(255, 255, 255)'
     });
     this.state = 0;
@@ -22,15 +22,16 @@ export default class MainPage extends Page {
   private displayCode() {
   	this.state = 3;
     let code = JSON.parse(localStorage.getItem(KEY));
-    if (!code.found) {
+    if (!code.found || !code.id) {
       return this.showLoginScreen();
     }
 
-    let name = "Welcome, " + code.first + " " + code.last + ".";
-    let clubs = "You are registered as:\nMESA Member";
+    let name = "Cardholder: " + code.first + " " + code.last;
+    let clubs = "Currently registered as:\n\nMESA Member";
     for (let club of code.clubs) {
       clubs += "\n" + club + " Member";
     }
+    let card = "MESA Plus Card ID: " + code.id;
 
   	this.disposeState();
 
@@ -38,18 +39,27 @@ export default class MainPage extends Page {
       id: 'name',
       text: name,
       textColor: 'black',
-      font: 'bold 12px',
+      font: 'bold 24px',
       opacity: 0,
-      centerX: 0, top: ['#image', 0],
+      centerX: 0, top: ['#image', 10],
+    }));
+
+    this.animateIn(new TextView({
+      id: 'card',
+      text: card,
+      textColor: 'black',
+      font: 'bold 24px',
+      opacity: 0,
+      centerX: 0, top: ['#name', 20],
     }));
 
     this.animateIn(new TextView({
       id: 'clubs',
       text: clubs,
       textColor: 'black',
-      font: 'bold 12px',
+      font: '16px',
       opacity: 0,
-      centerX: 0, top: ['#name', 0],
+      centerX: 0, top: ['#card', 20],
     }));
 
     this.animateIn(new Button({
@@ -63,8 +73,11 @@ export default class MainPage extends Page {
   }
 
   private createUI() {
+    this.view = new ScrollView({
+      left: 0, right: 0, top: 0, bottom: 0 
+    }).appendTo(this);
+
   	let tapEvent = () => {
-      console.log("tap" + this.state);
       if (this.state === 0) {
         if (localStorage.getItem(KEY)) {
           this.displayCode();
@@ -77,12 +90,13 @@ export default class MainPage extends Page {
     let image = new ImageView({
       image: {src: './images/logo.png'},
       scaleMode: 'auto',
+      height: screen.height / 4,
       opacity: 0,
-      top: 0,
+      centerX: 0, top: 0,
       id: 'image'
     });
 
-    image.on('tap', tapEvent).appendTo(this);
+    image.on('tap', tapEvent).appendTo(this.view);
 
     image.animate({
       opacity: 1,
@@ -108,15 +122,24 @@ export default class MainPage extends Page {
 
 	  this.disposeState();
 
+    this.animateIn(new TextView({
+      id: 'title',
+      text: 'MESA Plus Card',
+      textColor: 'black',
+      font: 'bold 24px',
+      opacity: 0,
+      centerX: 0, top: ['#image', 20],
+    }));
+
     this.input = new TextInput({
       id: 'input',
       message: 'E-mail',
       keyboard: 'email', // number decimal ascii numbersAndPunctuation url phone
-      centerX: 0, top: ['#image', 0],
+      centerX: 0, top: ['#title', 30],
       opacity: 0,
-      width: 300,
+      width: Math.min(300, screen.width - 50),
       textColor: 'black',
-      font: '24px'
+      font: '12px'
     });
 
     this.animateIn(this.input);
@@ -134,8 +157,7 @@ export default class MainPage extends Page {
   }
 
   private animateIn(ob: Widget, last = 1) {
-    console.log("anim " + ob);
-    ob.appendTo(this).animate({
+    ob.appendTo(this.view).animate({
       opacity: last,
     }, {
       delay: 100,
@@ -154,26 +176,26 @@ export default class MainPage extends Page {
       text: err,
       textColor: 'red',
       centerX: 0, top: ['prev()', 20],
-    }).appendTo(this);
+    }).appendTo(this.view);
   }
 
   private disposeState() {
-    console.log("dispose" + this.state);
-  	this.children("#activity").dispose();
-	  this.children("#input").dispose();
+  	this.view.children("#activity").dispose();
+	  this.view.children("#input").dispose();
+    this.view.children("#title").dispose();
   	if (this.input) {
   		this.input = null;
   	}
-  	this.children("#login").dispose();
-  	this.children("#error").dispose();
-	  this.children("#logout").dispose();
-    this.children("#name").dispose();
-    this.children("#clubs").dispose();
-	  this.children("#code").dispose();
+  	this.view.children("#login").dispose();
+  	this.view.children("#error").dispose();
+	  this.view.children("#logout").dispose();
+    this.view.children("#name").dispose();
+    this.view.children("#clubs").dispose();
+    this.view.children("#card").dispose();
+	  this.view.children("#code").dispose();
   }
 
   private login() {
-    console.log('log in');
   	let email = "";
     let origEmail = "";
 
@@ -186,7 +208,6 @@ export default class MainPage extends Page {
   		this.showError("Please enter a valid e-mail.");
   		return;
   	}
-    console.log("Send " + email);
 
   	this.state = 2;
 
@@ -197,7 +218,6 @@ export default class MainPage extends Page {
     fetch("http://api.mesa.ca/v1/auth.php?email=" + email)
     .then(response => response.json())
     .then(json => {
-      console.log("success " + json);
       json.email = origEmail;
 
       if (json.found) {
@@ -205,13 +225,12 @@ export default class MainPage extends Page {
 
         this.displayCode();
       } else {
-        this.showLoginScreen();
+        this.view.children("#activity").dispose();
         this.showError("E-mail not found.");
       }
     }).catch(err => {
-      console.log("fail " + err);
       // On error show want went wrong and reload button.
-      this.showLoginScreen();
+      this.view.children("#activity").dispose();
       this.showError("Failure: " + (err || "Error loading data"));
     });
   }
