@@ -33,7 +33,7 @@
     <splash src="www/res/drawable-xxxhdpi/screen-port.png" density="port-xxxhdpi" />
     <splash src="www/res/drawable-ldpi/screen-land.png" density="land-ldpi" />
     <splash src="www/res/drawable-mdpi/screen-land.png" density="land-mdpi" />
-    <splash src="www/res/drawable-hdpi/screen-landpng" density="land-hdpi" />
+    <splash src="www/res/drawable-hdpi/screen-land.png" density="land-hdpi" />
     <splash src="www/res/drawable-xhdpi/screen-land.png" density="land-xhdpi" />
     <splash src="www/res/drawable-xxhdpi/screen-land.png" density="land-xxhdpi" />
     <splash src="www/res/drawable-xxxhdpi/screen-land.png" density="land-xxxhdpi" />
