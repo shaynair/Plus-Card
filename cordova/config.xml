@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="ca.mesa.plus" version="0.3.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="ca.mesa.plus" version="0.4.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>MESA Plus</name>
   <description>
     MESA Plus Card
@@ -23,41 +23,73 @@
     <icon src="www/res/drawable-xxhdpi/icon.png" density="xxhdpi" />
     <icon src="www/res/drawable-xxxhdpi/icon.png" density="xxxhdpi" />
     <icon src="www/res/web_hi_res.png" width="512" height="512" />
+
+      <!-- you can use any density that exists in the Android project -->
+    <splash src="www/res/drawable-ldpi/screen-port.png" density="port-ldpi" />
+    <splash src="www/res/drawable-mdpi/screen-port.png" density="port-mdpi" />
+    <splash src="www/res/drawable-hdpi/screen-portpng" density="port-hdpi" />
+    <splash src="www/res/drawable-xhdpi/screen-port.png" density="port-xhdpi" />
+    <splash src="www/res/drawable-xxhdpi/screen-port.png" density="port-xxhdpi" />
+    <splash src="www/res/drawable-xxxhdpi/screen-port.png" density="port-xxxhdpi" />
+    <splash src="www/res/drawable-ldpi/screen-land.png" density="land-ldpi" />
+    <splash src="www/res/drawable-mdpi/screen-land.png" density="land-mdpi" />
+    <splash src="www/res/drawable-hdpi/screen-landpng" density="land-hdpi" />
+    <splash src="www/res/drawable-xhdpi/screen-land.png" density="land-xhdpi" />
+    <splash src="www/res/drawable-xxhdpi/screen-land.png" density="land-xxhdpi" />
+    <splash src="www/res/drawable-xxxhdpi/screen-land.png" density="land-xxxhdpi" />
   </platform>
   <platform name="ios">
     <!-- iOS 8.0+ -->
     <!-- iPhone 6 Plus  -->
-    <icon src="www/res/ios/Icon-60@3x.png" width="180" height="180" />
+    <icon src="www/res/ios/icons/Icon-60@3x.png" width="180" height="180" />
     <!-- iOS 7.0+ -->
     <!-- iPhone / iPod Touch  -->
-    <icon src="www/res/ios/Icon-60.png" width="60" height="60" />
-    <icon src="www/res/ios/Icon-60@2x.png" width="120" height="120" />
+    <icon src="www/res/ios/icons/Icon-60.png" width="60" height="60" />
+    <icon src="www/res/ios/icons/Icon-60@2x.png" width="120" height="120" />
     <!-- iPad -->
-    <icon src="www/res/ios/Icon-76.png" width="76" height="76" />
-    <icon src="www/res/ios/Icon-76@2x.png" width="152" height="152" />
-    <icon src="www/res/ios/Icon-72.png" width="72" height="72" />
-    <icon src="www/res/ios/Icon-72@2x.png" width="144" height="144" />
+    <icon src="www/res/ios/icons/Icon-76.png" width="76" height="76" />
+    <icon src="www/res/ios/icons/Icon-76@2x.png" width="152" height="152" />
+    <icon src="www/res/ios/icons/Icon-72.png" width="72" height="72" />
+    <icon src="www/res/ios/icons/Icon-72@2x.png" width="144" height="144" />
     <!-- Spotlight Icon -->
-    <icon src="www/res/ios/Icon-40.png" width="40" height="40" />
-    <icon src="www/res/ios/Icon-40@2x.png" width="80" height="80" />
+    <icon src="www/res/ios/icons/Icon-40.png" width="40" height="40" />
+    <icon src="www/res/ios/icons/Icon-40@2x.png" width="80" height="80" />
     <!-- iPhone Spotlight and Settings Icon -->
-    <icon src="www/res/ios/Icon-Small.png" width="29" height="29" />
-    <icon src="www/res/ios/Icon-Small@2x.png" width="58" height="58" />
-    <icon src="www/res/ios/Icon-Small@3x.png" width="87" height="87" />
-    <icon src="www/res/ios/Icon-Small-50.png" width="50" height="50" />
-    <icon src="www/res/ios/Icon-Small-50@2x.png" width="100" height="100" />
+    <icon src="www/res/ios/icons/Icon-Small.png" width="29" height="29" />
+    <icon src="www/res/ios/icons/Icon-Small@2x.png" width="58" height="58" />
+    <icon src="www/res/ios/icons/Icon-Small@3x.png" width="87" height="87" />
+    <icon src="www/res/ios/icons/Icon-Small-50.png" width="50" height="50" />
+    <icon src="www/res/ios/icons/Icon-Small-50@2x.png" width="100" height="100" />
 
-    <icon src="www/res/ios/Icon.png" width="57" height="57" />
-    <icon src="www/res/ios/Icon@2x.png" width="114" height="114" />
-    <icon src="www/res/ios/Icon@3x.png" width="171" height="171" />
+    <icon src="www/res/ios/icons/Icon.png" width="57" height="57" />
+    <icon src="www/res/ios/icons/Icon@2x.png" width="114" height="114" />
+    <icon src="www/res/ios/icons/Icon@3x.png" width="171" height="171" />
 
-    <icon src="www/res/ios/Icon-16.png" width="16" height="16" />
-    <icon src="www/res/ios/Icon-24.png" width="24" height="24" />
-    <icon src="www/res/ios/Icon-32.png" width="32" height="32" />
-    <icon src="www/res/ios/Icon-64.png" width="64" height="64" />
+    <icon src="www/res/ios/icons/Icon-16.png" width="16" height="16" />
+    <icon src="www/res/ios/icons/Icon-24.png" width="24" height="24" />
+    <icon src="www/res/ios/icons/Icon-32.png" width="32" height="32" />
+    <icon src="www/res/ios/icons/Icon-64.png" width="64" height="64" />
 
-    <icon src="www/res/ios/iTunesArtwork.png" width="512" height="512" />
-    <icon src="www/res/ios/iTunesArtwork@2x.png" width="1024" height="1024" />
+    <icon src="www/res/ios/icons/iTunesArtwork.png" width="512" height="512" />
+    <icon src="www/res/ios/icons/iTunesArtwork@2x.png" width="1024" height="1024" />
+
+    <!-- images are determined by width and height. The following are supported -->
+    <splash src="www/res/ios/screens/screen-iphone-portrait.png" width="320" height="480"/>
+    <splash src="www/res/ios/screens/screen-iphone-portrait-2x.png" width="640" height="960"/>
+    <splash src="www/res/ios/screens/screen-iphone-landscape.png" width="480" height="320"/>
+    <splash src="www/res/ios/screens/screen-iphone-landscape-2x.png" width="960" height="640"/>
+
+    <splash src="www/res/ios/screens/screen-ipad-portrait.png" width="768" height="1024"/>
+    <splash src="www/res/ios/screens/screen-ipad-portrait-2x.png" width="1536" height="2048"/>
+    <splash src="www/res/ios/screens/screen-ipad-landscape.png" width="1024" height="768"/>
+    <splash src="www/res/ios/screens/screen-ipad-landscape-2x.png" width="2048" height="1536"/>
+
+    <splash src="www/res/ios/screens/screen-iphone-portrait-568h-2x.png" width="640" height="1136"/>
+    <splash src="www/res/ios/screens/screen-iphone-portrait-667h.png" width="750" height="1334"/>
+    <splash src="www/res/ios/screens/screen-iphone-portrait-736h.png" width="1242" height="2208"/>
+    <splash src="www/res/ios/screens/screen-iphone-landscape-568h-2x.png" width="1136" height="640"/>
+    <splash src="www/res/ios/screens/screen-iphone-landscape-667h.png" width="1334" height="750"/>
+    <splash src="www/res/ios/screens/screen-iphone-landscape-736h.png" width="2208" height="1242"/>
   </platform>
   <access origin="http://api.mesa.ca" />>
   <allow-intent href="http://*/*" />
