@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="ca.mesa.plus" version="0.1.0">
+<widget id="ca.mesa.plus" version="0.1.0" xmlns="http://www.w3.org/ns/widgets">
   <name>MESA Plus</name>
   <description>
     MESA Plus Card
   </description>
-  <author email="info@mesa.ca">
+  <author email="info@mesa.ca" href="http://www.mesa.ca/">
     MESA at UTSC
   </author>
-  <icon src="images/logo.png" />
+  <icon src="../drawable/logo.png" />
 </widget>
