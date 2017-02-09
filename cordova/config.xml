@@ -16,48 +16,48 @@
         xxhdpi  : 144x144 px
         xxxhdpi : 192x192 px
     -->
-    <icon src="res/drawable-ldpi/icon.png" density="ldpi" />
-    <icon src="res/drawable-mdpi/icon.png" density="mdpi" />
-    <icon src="res/drawable-hdpi/icon.png" density="hdpi" />
-    <icon src="res/drawable-xhdpi/icon.png" density="xhdpi" />
-    <icon src="res/drawable-xxhdpi/icon.png" density="xxhdpi" />
-    <icon src="res/drawable-xxxhdpi/icon.png" density="xxxhdpi" />
-    <icon src="res/web_hi_res.png" width="512" height="512" />
+    <icon src="www/res/drawable-ldpi/icon.png" density="ldpi" />
+    <icon src="www/res/drawable-mdpi/icon.png" density="mdpi" />
+    <icon src="www/res/drawable-hdpi/icon.png" density="hdpi" />
+    <icon src="www/res/drawable-xhdpi/icon.png" density="xhdpi" />
+    <icon src="www/res/drawable-xxhdpi/icon.png" density="xxhdpi" />
+    <icon src="www/res/drawable-xxxhdpi/icon.png" density="xxxhdpi" />
+    <icon src="www/res/web_hi_res.png" width="512" height="512" />
   </platform>
   <platform name="ios">
     <!-- iOS 8.0+ -->
     <!-- iPhone 6 Plus  -->
-    <icon src="res/ios/Icon-60@3x.png" width="180" height="180" />
+    <icon src="www/res/ios/Icon-60@3x.png" width="180" height="180" />
     <!-- iOS 7.0+ -->
     <!-- iPhone / iPod Touch  -->
-    <icon src="res/ios/Icon-60.png" width="60" height="60" />
-    <icon src="res/ios/Icon-60@2x.png" width="120" height="120" />
+    <icon src="www/res/ios/Icon-60.png" width="60" height="60" />
+    <icon src="www/res/ios/Icon-60@2x.png" width="120" height="120" />
     <!-- iPad -->
-    <icon src="res/ios/Icon-76.png" width="76" height="76" />
-    <icon src="res/ios/Icon-76@2x.png" width="152" height="152" />
-    <icon src="res/ios/Icon-72.png" width="72" height="72" />
-    <icon src="res/ios/Icon-72@2x.png" width="144" height="144" />
+    <icon src="www/res/ios/Icon-76.png" width="76" height="76" />
+    <icon src="www/res/ios/Icon-76@2x.png" width="152" height="152" />
+    <icon src="www/res/ios/Icon-72.png" width="72" height="72" />
+    <icon src="www/res/ios/Icon-72@2x.png" width="144" height="144" />
     <!-- Spotlight Icon -->
-    <icon src="res/ios/Icon-40.png" width="40" height="40" />
-    <icon src="res/ios/Icon-40@2x.png" width="80" height="80" />
+    <icon src="www/res/ios/Icon-40.png" width="40" height="40" />
+    <icon src="www/res/ios/Icon-40@2x.png" width="80" height="80" />
     <!-- iPhone Spotlight and Settings Icon -->
-    <icon src="res/ios/Icon-Small.png" width="29" height="29" />
-    <icon src="res/ios/Icon-Small@2x.png" width="58" height="58" />
-    <icon src="res/ios/Icon-Small@3x.png" width="87" height="87" />
-    <icon src="res/ios/Icon-Small-50.png" width="50" height="50" />
-    <icon src="res/ios/Icon-Small-50@2x.png" width="100" height="100" />
+    <icon src="www/res/ios/Icon-Small.png" width="29" height="29" />
+    <icon src="www/res/ios/Icon-Small@2x.png" width="58" height="58" />
+    <icon src="www/res/ios/Icon-Small@3x.png" width="87" height="87" />
+    <icon src="www/res/ios/Icon-Small-50.png" width="50" height="50" />
+    <icon src="www/res/ios/Icon-Small-50@2x.png" width="100" height="100" />
 
-    <icon src="res/ios/Icon.png" width="57" height="57" />
-    <icon src="res/ios/Icon@2x.png" width="114" height="114" />
-    <icon src="res/ios/Icon@3x.png" width="171" height="171" />
+    <icon src="www/res/ios/Icon.png" width="57" height="57" />
+    <icon src="www/res/ios/Icon@2x.png" width="114" height="114" />
+    <icon src="www/res/ios/Icon@3x.png" width="171" height="171" />
 
-    <icon src="res/ios/Icon-16.png" width="16" height="16" />
-    <icon src="res/ios/Icon-24.png" width="24" height="24" />
-    <icon src="res/ios/Icon-32.png" width="32" height="32" />
-    <icon src="res/ios/Icon-64.png" width="64" height="64" />
+    <icon src="www/res/ios/Icon-16.png" width="16" height="16" />
+    <icon src="www/res/ios/Icon-24.png" width="24" height="24" />
+    <icon src="www/res/ios/Icon-32.png" width="32" height="32" />
+    <icon src="www/res/ios/Icon-64.png" width="64" height="64" />
 
-    <icon src="res/ios/iTunesArtwork.png" width="512" height="512" />
-    <icon src="res/ios/iTunesArtwork@2x.png" width="1024" height="1024" />
+    <icon src="www/res/ios/iTunesArtwork.png" width="512" height="512" />
+    <icon src="www/res/ios/iTunesArtwork@2x.png" width="1024" height="1024" />
   </platform>
   <access origin="http://api.mesa.ca" />>
   <allow-intent href="http://*/*" />
